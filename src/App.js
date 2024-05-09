@@ -80,12 +80,10 @@ function App() {
           /> 
 
       </div>
-      
-
+  
      );
   }
   
-
 
   if (error) {
     return <div>Error: {error.message}</div>;
@@ -95,9 +93,6 @@ function App() {
 
   return (
    
-   
-
-
 
     <div className="App">
       <div className='App-Top'>
@@ -172,8 +167,6 @@ function Subject22() {
     );
   }
 
-
-
   function Subject33() {
    
     const Motion = (e)=>{
@@ -190,12 +183,8 @@ function Subject22() {
            /> 
   
        </div>
-       
-  
       );
    }
-
-
        return(
         <>
         {Motion}
