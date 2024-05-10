@@ -5,7 +5,6 @@ import { useInput } from './Custom Hooks/useInput';
 
 import { motion } from "framer-motion";
 
-
 function App() {
 
   /**input text 처리부분 */
