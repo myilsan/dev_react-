@@ -147,6 +147,8 @@ function Subject22() {
     alert("첫번째 수정");
     alert("두번째 수정");
     alert("세번째 수정");
+    alert("네번째 수정");
+    alert("다섯번째 수정");
   };
 
   
