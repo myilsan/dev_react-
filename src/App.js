@@ -145,6 +145,7 @@ function Subject22() {
   const  handleEventClick = (e)=>{
     e.preventDefault();
     alert("첫번째 수정");
+    alert("두번째 수정");
   };
 
   
