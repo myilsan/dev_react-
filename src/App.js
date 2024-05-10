@@ -146,6 +146,7 @@ function Subject22() {
     e.preventDefault();
     alert("첫번째 수정");
     alert("두번째 수정");
+    alert("세번째 수정");
   };
 
   
