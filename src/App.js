@@ -144,7 +144,7 @@ function App() {
 function Subject22() {
   const  handleEventClick = (e)=>{
     e.preventDefault();
-    alert("tt");
+    alert("첫번째 수정");
   };
 
   
