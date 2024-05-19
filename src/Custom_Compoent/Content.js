@@ -16,6 +16,7 @@ function Content()
         <div>
             {this.props.title2}컨텐즈 내용입니다.
         </div>
+        
     )
     
 }
