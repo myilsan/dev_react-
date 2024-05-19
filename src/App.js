@@ -128,10 +128,8 @@ function App() {
           </tbody>
         </table>
       </div>
-      
       <Content></Content>
-     
-      <div>
+     <div>
       <h1>useInput</h1>
       <input type="text" value={inputValue} onChange={handleChange}></input>
       <button onClick={hadleSubmit}>확인</button>
