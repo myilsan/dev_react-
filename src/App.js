@@ -1,9 +1,11 @@
 import  { Component, useState } from 'react';
 import './App.css';
 import { useEffect } from 'react';
-import { useInput } from './Custom Hooks/useInput';
+import { useInput } from './Custom_Hooks/useInput';
 
 import { motion } from "framer-motion";
+
+import Content from './Custom_Compoent/Content.js';
 
 function App() {
 
@@ -33,7 +35,7 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/user/test?q=myilsan44&name=myilsan.&age=20")
+    fetch("https://jsonplaceholder.typicode.com/users")
       .then(res => res.json())
       .then(
         (result) => {
@@ -127,13 +129,15 @@ function App() {
         </table>
       </div>
       
-         <div>
-          <h1>useInput</h1>
-          <input type="text" value={inputValue} onChange={handleChange}></input>
-          <button onClick={hadleSubmit}>확인</button>
-         </div>
-
+      <Content></Content>
      
+      <div>
+      <h1>useInput</h1>
+      <input type="text" value={inputValue} onChange={handleChange}></input>
+      <button onClick={hadleSubmit}>확인</button>
+      </div>
+
+      
 
     </div>
   );
@@ -151,10 +155,6 @@ function Subject22() {
     alert("다섯번째 수정");
   };
 
-  
-  
- 
-
   function click2()
   {
       alert("click2 호출");
@@ -164,39 +164,15 @@ function Subject22() {
             <h1>Web</h1>
              <a href="/" onClick={handleEventClick}> link1 </a> 
              <p></p>
-             <a href="/" onClick={()=>{alert("클릭");}}> link2 </a> 
+             <a href="/" onClick={(e)=>{alert("클릭");e.preventDefault();}}> link2 </a> 
+             <Content title2="props title입니다."></Content>
+             <Content title2="props title입니다."></Content>
+             <Content title2="props title입니다."></Content>
         </header>       
-
+        
+     
     );
-  }
-
-  function Subject33() {
-   
-    const Motion = (e)=>{
-      return(
-       <div>
-          <motion.div
-             initial={{ scale: 0 }}
-             animate={{ rotate: 180, scale: 1 }}
-             transition={{
-               type: "spring",
-               stiffness: 260,
-               damping: 20
-             }}
-           /> 
-  
-       </div>
-      );
-   }
-       return(
-        <>
-        {Motion}
-        </>
-      );
-    }
+}
 
 
-  
-
-
-export default  Subject33;
+export default  Subject22;
