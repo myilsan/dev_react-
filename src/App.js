@@ -3,7 +3,6 @@ import './App.css';
 import { useEffect } from 'react';
 import { useInput } from './Custom_Hooks/useInput';
 
-import { motion } from "framer-motion";
 
 import Content from './Custom_Compoent/Content.js';
 
@@ -66,24 +65,6 @@ function App() {
       </tr>
      );
   });
-
-  const Motion = (e)=>{
-     return(
-      <div>
-         <motion.div
-            initial={{ scale: 0 }}
-            animate={{ rotate: 180, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 260,
-              damping: 20
-            }}
-          /> 
-
-      </div>
-  
-     );
-  }
   
 
   if (error) {
@@ -173,4 +154,4 @@ function Subject22() {
 }
 
 
-export default  Subject22;
+export default  App;
