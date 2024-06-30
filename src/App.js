@@ -6,6 +6,8 @@ import { useInput } from './Custom_Hooks/useInput';
 
 import Content from './Custom_Compoent/Content.jsx';
 import Button from './Custom_Compoent/Button.jsx';
+import Resister from './Custom_Compoent/Resister.jsx';
+
 
 function App() {
 
@@ -121,6 +123,8 @@ function App() {
       <Button text={"메일"} color={"red"}></Button>
       <Button text={"카페"} ></Button>
       <Button text={"블로그"} color={"blue"}></Button>
+
+    <Resister></Resister>
 
 
     </div>
