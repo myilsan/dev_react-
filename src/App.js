@@ -24,7 +24,7 @@ function App() {
   };
 
   const  [data , setdata] = useState("useState");  
-  let handleClick =()=> { setdata("useState변경되었습니다..") };
+  const handleClick =()=> { setdata("useState변경되었습니다..") };
 
   const title =["번호","이름","이메일","주소","전화번호","website"];
  
@@ -116,7 +116,8 @@ function App() {
       <input type="text" value={inputValue} onChange={handleChange}></input>
       <button onClick={hadleSubmit}>확인</button>
       </div>
-    <p></p>      버튼 컴포턴트 테스트 :  
+    <p></p>     
+     버튼 컴포턴트 테스트 :  
       <Button text={"메일"} color={"red"}></Button>
       <Button text={"카페"} ></Button>
       <Button text={"블로그"} color={"blue"}></Button>
@@ -131,11 +132,7 @@ function App() {
 function Subject2() {
   const  handleEventClick = (e)=>{
     e.preventDefault();
-    alert("첫번째 수정");
-    alert("두번째 수정");
-    alert("세번째 수정");
-    alert("네번째 수정");
-    alert("다섯번째 수정");
+ 
   };
 
   function click2()
@@ -157,3 +154,9 @@ function Subject2() {
 
 
 export default  App;
+
+// 컴포넌트는 3가지 상황에  리렌더링 되는경우 3가지(관련없는 다른 컴포넌트 도 리렌더링 됨으로 부하발생)
+// 1. 자신이 관리하는 state 변경되었을때
+// 2. 자신이 관리하는 props 변경되었을때
+// 3. 부모 컴포넌트가 리렌더링 되면 자식 컴포넌트로 리렌더링 된다.
+//해결 방법 : 변경시 관련이 없다면 컴퍼넌트로 분리해주면 해결된다.
