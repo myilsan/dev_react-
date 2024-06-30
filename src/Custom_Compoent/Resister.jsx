@@ -1,5 +1,7 @@
 import { useState } from "react";
-
+/*********************************
+ * input box useState 처리방법
+*********************************/
 //1.이름
 //2.생년월일
 //3.국정
@@ -20,7 +22,7 @@ const Resister =()=>{
         });
     };
   
-    /**
+    /** 각각 처리 하지
     const onChangeName =(e) =>{ 
         setName(e.target.value);
         //console.log(e.target.value);

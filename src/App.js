@@ -124,7 +124,7 @@ function App() {
       <Button text={"카페"} ></Button>
       <Button text={"블로그"} color={"blue"}></Button>
 
-    <Resister></Resister>
+      <Resister></Resister>
 
 
     </div>
