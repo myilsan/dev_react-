@@ -13,7 +13,7 @@ function Content(props)
     return( 
         
         <div>
-          props: {props.text} 
+          Contents props: {props.text} 
         </div>
         
     )

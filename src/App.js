@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { useInput } from './Custom_Hooks/useInput';
 
 
-import Content from './Custom_Compoent/Content.js';
+import Content from './Custom_Compoent/Content.jsx';
 import Button from './Custom_Compoent/Button.jsx';
 
 function App() {
