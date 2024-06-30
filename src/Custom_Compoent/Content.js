@@ -1,23 +1,27 @@
 import React from 'react';
 
-
-function Content()
+function Content(props)
 {   
     //let teste = "test";
 
-    //console.log(teste);
+    //console.log(props);
     
     //console.log(this.props.title2);
 
-    const title2 = this.props.title2;
-    console.log(title2);
+    //const title2 = this.props.title2;
+    console.log(props);
     return( 
         
         <div>
-            {this.props.title2}컨텐즈 내용입니다.
+          props: {props.text} 
         </div>
         
     )
-    
 }
+
+const Content2 = () =>{
+    return 
+
+};
+
 export default Content;

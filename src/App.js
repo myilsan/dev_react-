@@ -5,6 +5,7 @@ import { useInput } from './Custom_Hooks/useInput';
 
 
 import Content from './Custom_Compoent/Content.js';
+import Button from './Custom_Compoent/Button.jsx';
 
 function App() {
 
@@ -109,14 +110,17 @@ function App() {
           </tbody>
         </table>
       </div>
-      <Content></Content>
+    <Content text ={"전달합니다."} />
      <div>
       <h1>useInput</h1>
       <input type="text" value={inputValue} onChange={handleChange}></input>
       <button onClick={hadleSubmit}>확인</button>
       </div>
+    <p></p>      버튼 컴포턴트 테스트 :  
+      <Button text={"메일"} color={"red"}></Button>
+      <Button text={"카페"} ></Button>
+      <Button text={"블로그"} color={"blue"}></Button>
 
-      
 
     </div>
   );
@@ -124,7 +128,7 @@ function App() {
 }
 
 
-function Subject22() {
+function Subject2() {
   const  handleEventClick = (e)=>{
     e.preventDefault();
     alert("첫번째 수정");
@@ -144,9 +148,7 @@ function Subject22() {
              <a href="/" onClick={handleEventClick}> link1 </a> 
              <p></p>
              <a href="/" onClick={(e)=>{alert("클릭");e.preventDefault();}}> link2 </a> 
-             <Content title2="props title입니다."></Content>
-             <Content title2="props title입니다."></Content>
-             <Content title2="props title입니다."></Content>
+
         </header>       
         
      
