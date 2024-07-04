@@ -5,7 +5,7 @@ import { useState } from "react";
 //1.이름
 //2.생년월일
 //3.국정
-//4.자기소개
+
 const Resister =()=>{
     
     const [input,setInput] = useState({
