@@ -29,8 +29,6 @@ const Editer=({onCreate}) => {
             onSubmit();
         }
     };
-
-
     
     return( 
         <div className="Editor">
