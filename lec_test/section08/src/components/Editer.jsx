@@ -35,7 +35,7 @@ const Editer=({onCreate}) => {
     return( 
         <div className="Editor">
             <input 
-                onKeydown={onKeydown} 
+                onKeyDown={onKeydown} 
                 ref={contentRef} 
                 value={content} 
                 onChange={onChangeContent} 
