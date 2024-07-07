@@ -12,7 +12,7 @@ function App() {
      {
         id :1,  
         isDone : false,
-        content : "react 공부하기",
+        content : "점심먹구 운동하기",
         date : new Date().getTime()
 
      },
@@ -44,13 +44,25 @@ function App() {
     setTodos([newTodo, ...todos]);
   };
 
+    //check 선택 처리 하기 
+  const onUpdate =(targetId)=>{
+      //todos state의 값들 중에 targetId 와 일치하는  id를 갖는  투두 아이템의 isDone 변경
+    setTodos(todos.map((e)=>{
+            if(e.id == targetId){
+              return {...e, isDone : !e.isDone} 
+            }
+            return e;
+          }));
+
+  };
+
 
   return (
     <>
     <div className='App'>
     <Header />
     <Editer onCreate={onCreate} />
-    <List  todos={todos} />
+    <List  todos={todos} onUpdate={onUpdate}  />
     </div>
     
     </>
