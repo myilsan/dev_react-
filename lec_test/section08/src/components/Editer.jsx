@@ -24,18 +24,16 @@ const Editer=({onCreate}) => {
 
 //Enter 처리
     const onKeydown =(e)=>{
-        alert(e.keyCode);
+        //alert(e.keyCode);
         if(e.keyCode ==13){
             onSubmit();
         }
     };
-
-
     
     return( 
         <div className="Editor">
             <input 
-                onKeydown={onKeydown} 
+                onKeyDown={onKeydown} 
                 ref={contentRef} 
                 value={content} 
                 onChange={onChangeContent} 

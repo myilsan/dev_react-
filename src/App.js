@@ -57,7 +57,7 @@ function App() {
   
   
   
-  const DataList = items.map((d,idx)=>{
+  const DataList = items.map((d, idx)=>{
     //console.log(d,idx);
     return( 
       <tr key={idx}>
