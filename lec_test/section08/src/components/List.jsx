@@ -30,7 +30,7 @@ const List=({todos, onUpdate})=>{
             <div className="todos_wrapper">
                 
                 {
-                //todos.map((todo) =>{ --> filteredTodos.map((todo) 변경처리 git
+                //todos.map((todo) =>{ --> filteredTodos.map((todo) 변경처리 수정
                 filteredTodos.map((todo) =>{    
                     return <TodoItem key={todo.id} {...todo} onUpdate={onUpdate} />
 
