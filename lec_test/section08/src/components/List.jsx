@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./List.css";
 import TodoItem from "./TodoItem.jsx";
 
-const List=({todos, onUpdate})=>{
+const List=({todos, onUpdate, onDelete})=>{
 
     const [search,setSearch] = useState(""); //검색 useState    
     const  onChangeSearch = (e)=> {
@@ -32,7 +32,7 @@ const List=({todos, onUpdate})=>{
                 {
                 //todos.map((todo) =>{ --> filteredTodos.map((todo) 변경처리 수정
                 filteredTodos.map((todo) =>{    
-                    return <TodoItem key={todo.id} {...todo} onUpdate={onUpdate} />
+                    return <TodoItem key={todo.id} {...todo} onUpdate={onUpdate} onDelete={onDelete} />
 
                 })}
                

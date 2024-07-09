@@ -19,14 +19,14 @@ function App() {
      {
       id :2,  
       isDone : false,
-      content : "노래 연습하기",
+      content : "탄수화물 줄이기",
       date : new Date().getTime()
 
      },
      {
       id :3,  
       isDone : false,
-      content : "빨래하기",
+      content : "꺼꾸로 식사법 지키기",
       date : new Date().getTime()
      }
   ];
@@ -56,13 +56,18 @@ function App() {
 
   };
 
+  const onDelete =(targetId)=>{
+    //인수: todos 배열에서 targetId와 일치하는 id를 갖는 요소만 삭제한 새로운 배열
+    setTodos(todos.filter((e)=> e.id != targetId));
+  };
+
 
   return (
     <>
     <div className='App'>
     <Header />
     <Editer onCreate={onCreate} />
-    <List  todos={todos} onUpdate={onUpdate}  />
+    <List  todos={todos} onUpdate={onUpdate}  onDelete={onDelete} />
     </div>
     
     </>
