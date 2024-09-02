@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useState ,useContext} from "react";
 import "./List.css";
 import TodoItem from "./TodoItem.jsx";
+import {TodoStateContext} from "../App.jsx"
 
-const List=({todos, onUpdate, onDelete})=>{
+const List=()=>{
+
+
+
+    const todos = useContext(TodoStateContext); //1개일때는 배열로 인식하기때문에 {todos} 구조분해 할당으로 가져오지 않음
 
     const [search,setSearch] = useState(""); //검색 useState    
     const  onChangeSearch = (e)=> {
@@ -31,7 +36,7 @@ const List=({todos, onUpdate, onDelete})=>{
                 {
                 //todos.map((todo) =>{ --> filteredTodos.map((todo) 변경처리 수정
                 filteredTodos.map((todo) =>{    
-                    return <TodoItem key={todo.id} {...todo} onUpdate={onUpdate} onDelete={onDelete} />
+                    return <TodoItem key={todo.id} {...todo}  />
                 })}
                
             </div>

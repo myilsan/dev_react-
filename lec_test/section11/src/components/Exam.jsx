@@ -1,4 +1,4 @@
-import {useReducer} from "react";
+import {useState,useReducer,useCallback} from "react";
 
 //reducer: 변환기
 //-> 상태를 실제로 변화시키는 변환기 역활
@@ -35,13 +35,41 @@ const Exam =()=>{
         });
     };
 
+    const [count, setCount] = useState(0);
+    
+    // const handleClick = useCallback(() => {
+    //   setCount(prevCount => prevCount + 1);
+    //   console.log("111");
+    // }, []);
+
+    const handleClick =()=>{  
+        setCount(prevCount => prevCount + 1);
+        console.log(count);
+    }
+   
+    function ChildComponent({ onClick }) {
+        return (
+          <button onClick={onClick}>Click me</button>
+        );
+      }
+    
+
     return (
-    <div>
-        <h1>{state}</h1>
-        <button onClick={onClickPlus}>+</button>
-        <button onClick={onClickMinus}>-</button>
-    </div>
+    <>
+        <div>
+            <h1>{state}</h1>
+            <button onClick={onClickPlus}>+</button>
+            <button onClick={onClickMinus}>-</button>
+        </div>
+
+        <div>
+            <ChildComponent onClick={handleClick} />
+        </div>
+    </>
+    
     );
 };
+
+
 
 export default Exam;
