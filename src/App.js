@@ -3,7 +3,6 @@ import './App.css';
 import { useEffect } from 'react';
 import { useInput } from './Custom_Hooks/useInput';
 
-
 import Content from './Custom_Compoent/Content.jsx';
 import Button from './Custom_Compoent/Button.jsx';
 import Resister from './Custom_Compoent/Resister.jsx';
