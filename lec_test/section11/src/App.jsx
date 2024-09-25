@@ -1,6 +1,6 @@
 
 import './App.css'
-import { useRef, useState, useReducer ,useCallback} from "react";
+import { useRef, useState, useReducer ,useCallback,createContext,useMemo} from "react";
 import Header from './components/Header'
 import Editor from "./components/Editor";
 import List from './components/List'
@@ -30,6 +30,7 @@ const mockData =[
   }
 ];
 
+
 function reducer(state, action) {
   switch (action.type) {
     case "CREATE":
@@ -48,6 +49,13 @@ function reducer(state, action) {
       return state;
   }
 }
+
+export const TodoContext = createContext(); 
+
+export const TodoStateContext= createContext();
+export const TodoDispatchContext = createContext();//하위컴포넌트에서 불러쓸수 있도록 export
+
+console.log(TodoDispatchContext);
 
 
 function App() {
@@ -83,17 +91,23 @@ function App() {
   };   
   const onDelete = useCallback(onDelete_,[]);
 
+  const memoizedDispatch = useMemo(() => {
+    return { onCreate, onUpdate, onDelete };
+  }, []);
 
   return (
     <div className="App">
-      {/* <Exam /> */}
-      <Header />
-      <Editor onCreate={onCreate} />
-      <List
-        todos={todos}
-        onUpdate={onUpdate}
-        onDelete={onDelete}
-      />
+      <Exam />
+      {/* <Header />
+
+
+      <TodoStateContext.Provider value={todos}>
+        <TodoDispatchContext.Provider value={memoizedDispatch}>
+          <Editor />
+          <List />
+        </TodoDispatchContext.Provider>
+      </TodoStateContext.Provider> */}
+      
     </div>
   );
 }
