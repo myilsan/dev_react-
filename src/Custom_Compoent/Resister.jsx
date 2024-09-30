@@ -33,6 +33,36 @@ const Resister =()=>{
     }
     **/
 
+    const collback_test = (n, callback)=>{
+        setTimeout(()=>{
+            const aa = n +1;
+
+            if(callback){
+                callback(aa);
+            }
+
+        },3000)
+        
+    };
+    
+/** 
+    collback_test(100,(e)=>{
+        console.log(e);
+
+    })
+    
+**/
+    collback_test(390,res)
+    
+   function res(e) 
+    {
+        console.log(e);
+
+    }
+    
+
+
+
     return(
         <>
         <div>
