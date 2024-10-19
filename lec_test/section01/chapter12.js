@@ -43,11 +43,11 @@ for(let i=0; i < arr.length; i++){
 }
 
 arr2.forEach(element => {
-    arr(element);
+    console.log(element);
 });
 
 for (const element of arr2) {
-    arr(element);
+    console.log(element);
 }
 
 //객체 for문 사용하기 
@@ -64,7 +64,7 @@ for(let key of keys)
     console.log(key,value);
 }
 
-for (let key in arr2) {
+for (let key in person) {
     const value = person[key]
     console.log(key, value);
 }
