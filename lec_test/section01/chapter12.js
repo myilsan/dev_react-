@@ -94,7 +94,7 @@ add(1, 45 , (result)=>{
 
 
 //** promise  test **/
-console.log(" promise  test");
+console.log(" promise          test");
 function add10(num)
 {
     const promise = new Promise((resulve,reject)=>{ //resulve : 성공일때 , reject:실패일때
@@ -167,5 +167,8 @@ async function printData()
     const data = await getData();
     console.log(data);
 }
+
+
+
 
 printData();
