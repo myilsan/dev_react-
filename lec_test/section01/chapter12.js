@@ -145,7 +145,6 @@ add10(0)
 //   console.log(error);
 //});
 
-
 async function getData(){
     const data = new Promise((resulve,reject)=>{ //resulve : 성공일때 , reject:실패일때
         setTimeout(()=>{            
