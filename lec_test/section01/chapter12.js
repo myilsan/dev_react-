@@ -139,7 +139,6 @@ add10(0)
     //console.log(error);
 //});
 
-
 //실패
 //promise.catch((error)=>{
 //   console.log(error);
