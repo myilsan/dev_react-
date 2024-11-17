@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "NamumPenScript";
+  src: url("/NanumPenScript-Regular.ttf"); /* public 폴더가 root */
+}
+
+html,
+body {
+  margin: 100px;
+  width: 100%;
+  background-color: rgb(246, 246, 246);
+}
+
+body * {
+  font-family: "NamumPenScript";
+}
