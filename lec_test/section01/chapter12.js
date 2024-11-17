@@ -21,7 +21,6 @@ function sub() {
 
 main(sub)
 
-
 // 1.Spread 연산자
 //--> Spread : 흩뿌리다, 펼치다 라는 뜻
 //--<
@@ -66,7 +65,6 @@ for (let key in person) {
     console.log(key, value);
 }
 
-
 const mapResult = arr2.map((item,idx, arr)=>{    
     return item * 2 ;    
 });
@@ -92,15 +90,18 @@ add(1, 45 , (result)=>{
 
 /*********************/
 
-
-//** promise  test **/
+ /* promise  test */ 
 console.log(" promise          test");
 function add10(num)
 {
-    const promise = new Promise((resulve,reject)=>{ //resulve : 성공일때 , reject:실패일때
+    const promise = new Promise((rosolev,reject)=>{ //resulve : 성공일때 , reject:실패일때
+        
+        // throw new Error("에러 발생였습니다.");
+        
+        // 2초 뒤 실행되도록 
         setTimeout(()=>{
             if(typeof num ==="number"){
-                resulve(num +10);
+                rosolev(num +10);
             }else{
                 reject("not number");
             }
@@ -126,6 +127,7 @@ add10(0)
 .catch((error)=>{
     console.log(error);
 })
+.finally(()=>  console.log("Proise end"));
 
 //setTimeout(()=>{
 //   console.log(promise);
@@ -145,9 +147,9 @@ add10(0)
 //});
 
 async function getData(){
-    const data = new Promise((resulve,reject)=>{ //resulve : 성공일때 , reject:실패일때
+    const data = new Promise((rosolev,reject)=>{ //resulve : 성공일때 , reject:실패일때
         setTimeout(()=>{            
-            resulve({
+            rosolev({
                 name:"최경호",
                 id:"myilsan"
             });           
@@ -157,8 +159,6 @@ async function getData(){
     return data;
 }
 
-
-
 async function printData()
 {
     //await getData().then((result)=>{console.log(result)});
@@ -166,10 +166,19 @@ async function printData()
     console.log(data);
 }
 
-
 printData();
 
 
+let promise = new Promise((resolve,resject)=>{
+    setTimeout(()=>{resolve("성공")},100);
+});
+
+promise.then(
+    (result) => alert(result),
+    error => alert(error)
+)
+
+ 
 // 0,null,undefined,"" => 은 falsy 임 나머지 는 모두  truthy 임
 
  
@@ -201,5 +210,5 @@ printData();
 //alert 는 undefined 으로 응답한다.
 
 //alert( alert(1) && alert(2) && 3 )
-alert( "" && alert(2) && 5 );
+//alert( "" && alert(2) && 5 );
 
