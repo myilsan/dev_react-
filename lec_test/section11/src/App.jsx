@@ -5,7 +5,11 @@ import Header from './components/Header'
 import Editor from "./components/Editor";
 import List from './components/List'
 import Exam from './components/Exam.jsx'
+import Redux from './redux.jsx';
 
+import Counter from './reducers/counter.jsx';
+import { Provider } from 'react-redux';
+import store from './reducers/store.jsx';
 
 const mockData =[
   {
@@ -97,7 +101,17 @@ function App() {
 
   return (
     <div className="App">
-      <Exam />
+      
+      <Provider store={store}>
+      <div>Redux  count</div>
+            < Counter />
+            <div>useReducer  사용한 카운터</div>
+            <Exam />
+            <Redux/>
+      </Provider>
+
+
+     
       {/* <Header />
 
 
