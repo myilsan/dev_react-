@@ -1,4 +1,5 @@
 import "./Header.css";
+
 export default function Hearder({ title, leftChild, rightChild }) {
   return (
     <header className="Header">
