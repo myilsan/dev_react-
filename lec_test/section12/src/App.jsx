@@ -143,7 +143,7 @@ function App() {
         <Link to={"/Diary"}> Diary </Link>
       </div>
       <button onClick={onClickButton}> new로 이동하기</button> */}
-      {/* <button
+      <button
         onClick={() => {
           onCreate(new Date().getTime(), 1, "추가 테스트");
         }}
@@ -163,7 +163,7 @@ function App() {
         }}
       >
         일기 삭제 테스트
-      </button> */}
+      </button>
       {/*데이타 프롭스로 공급받도록  createContext 사용 */}
       <DiaryStaticContext.Provider value={data}>
         <DiaryDispatchContext.Provider
