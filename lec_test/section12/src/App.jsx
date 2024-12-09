@@ -14,19 +14,19 @@ import { createContext, useReducer, useRef } from "react";
 const mockData = [
   {
     id: 1,
-    createDate: new Date("2024-11-21").getTime(),
+    createDate: new Date("2024-12-21").getTime(),
     emotionId: 1,
     content: "1번 일기내용",
   },
   {
     id: 2,
-    createDate: new Date("2024-11-22").getTime(),
+    createDate: new Date("2024-12-22").getTime(),
     emotionId: 2,
     content: "2번 일기내용",
   },
   {
     id: 3,
-    createDate: new Date("2024-10-20").getTime(),
+    createDate: new Date("2024-11-20").getTime(),
     emotionId: 3,
     content: "3번 일기내용",
   },
@@ -68,6 +68,17 @@ function App() {
 
   const [data, dispatch] = useReducer(reducer, mockData);
   const idRef = useRef(4); //아이디값생성을 위함
+
+  //*********로컬스토리지 test
+  localStorage.setItem("test", "hello");
+  //스토리지는  스트링으로 저장되기 때문에 JSON.stringify 저장함.
+  localStorage.setItem("person", JSON.stringify({ name: "최경호" }));
+
+  console.log(localStorage.getItem("test"));
+  //스트링으로 저장된것을 객제로 가져와야 하기때문에 JSON.parse 이용함
+  console.log(JSON.parse(localStorage.getItem("person")));
+
+  localStorage.removeItem("test"); //삭제
 
   const onCreate = (createDate, emotionId, content) => {
     //새로운 일기를 추가
