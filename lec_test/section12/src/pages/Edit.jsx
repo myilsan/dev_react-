@@ -43,7 +43,7 @@ export default function Edit() {
     let result = window.confirm("일기를 정말 수정할까요?");
     if (result) {
       onUpdate(
-        params.id,
+        Number(params.id),
         input.createDate.getTime(),
         input.emotionId,
         input.content
