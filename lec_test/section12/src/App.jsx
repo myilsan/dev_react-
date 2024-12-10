@@ -42,6 +42,7 @@ function reducer(state, action) {
     case "CREATE":
       return [action.data, ...state];
     case "UPDATE":
+      console.log('Updating item:', action.data); // 디버깅용 로그
       return state.map((item) =>
         String(item.id) === String(action.data.id) ? action.data : item
       );
