@@ -29,7 +29,7 @@ getData(
 );
 
 /*
- * Promise를 사용한 예제
+ * Promise를 사용한 예제_test
  */
 
 function getData2(param1, param2) {
