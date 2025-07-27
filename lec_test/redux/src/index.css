@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "NamumPenScript";
+  src: url("/NanumPenScript-Regular.ttf"); /* public 폴더가 root */
+}
+
+html,
+body {
+  margin: 0px;
+  width: 100%;
+  background-color: rgb(246, 246, 246);
+  display: flex;
+}
+#root {
+  background-color: white;
+  max-width: 600px; /*최대늘어는 픽셀*/
+  width: 100%;
+  margin: 0 auto; /*가운데 정렬*/
+  min-height: 100vh; /*vh는 현재 스크린 크기*/
+  height: 100%;
+  box-shadow: rgba(100, 100, 100, 0.2) 0px 0px 29px 0px;
+  padding: 0px 20px; /*상하 0px, 좌우 20px*/
+}
+
+body * {
+  font-family: "NamumPenScript";
+}
