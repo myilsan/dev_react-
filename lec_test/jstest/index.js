@@ -29,7 +29,10 @@ getData(
 );
 
 /*
- * Promise를 사용한 예제_test
+ * Promise를 사용한 예제
+ * 1. Promise 객체를 생성
+ * 2. Promise 객체의 resolve() 메소드를 호출
+ * 3. Promise 객체의 then() 메소드를 호출
  */
 
 function getData2(param1, param2) {
