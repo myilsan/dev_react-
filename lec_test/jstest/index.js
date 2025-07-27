@@ -29,7 +29,11 @@ getData(
 );
 
 /*
- * Promise를 사용한 예제
+ * Promise를 사용한 예제_1
+ * 1. getData2 함수를 먼저 정의한다.
+ * 2. getData2 함수를 호출한다.
+ * 3. Promise를 사용하여 데이터를 가져온다.
+ * 4. 데이터를 출력한다.
  */
 
 function getData2(param1, param2) {
