@@ -34,6 +34,7 @@ getData(
  * 2. Promise 객체의 resolve() 메소드를 호출
  * 3. Promise 객체의 then() 메소드를 호출
  * 4. Promise 객체의 then() 메소드의 콜백 함수에서 Promise 객체의 resolve() 메소드의 인자로 전달한 값에 접근
+ * 5. 5번 main 에서 수정
  */
 
 function getData2(param1, param2) {
