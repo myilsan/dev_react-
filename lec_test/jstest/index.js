@@ -72,3 +72,53 @@ async function showData() {
 }
 
 showData();
+
+// getData3 함수 (Promise와 에러 처리 예제)
+function getData3(param1, param2, shouldReject = false) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (shouldReject) {
+        reject(new Error("데이터를 가져오는 데 실패했습니다.")); // 에러 시 reject 호출
+        return;
+      }
+
+      const data1 = {
+        name: "김철수",
+        sex: "남자",
+        address: "서울시 강남구",
+        message: () => alert(`이름 : ${data1.name} ${param1.a}`),
+      };
+      const data2 = {
+        name: "이영희",
+        age: 30,
+        sex: "여자",
+        address: "서울시 서초구",
+        message: () => alert(`이름 : ${data2.name} ${param2.b}`),
+      };
+      resolve([data1, data2]);
+    }, 2000);
+  });
+}
+
+// getData3 사용 예제 (async/await와 try...catch)
+async function showData3() {
+  console.log("\n--- getData3 호출 (성공 케이스) ---");
+  try {
+    const [data1, data2] = await getData3({ a: "새로운 파라미터" }, { b: "새로운 파라미터2" });
+    data1.message();
+    data2.message();
+    console.log("getData3 성공:", data1);
+    console.log("getData3 성공:", data2);
+  } catch (error) {
+    console.error("getData3 에러:", error.message);
+  }
+
+  console.log("\n--- getData3 호출 (실패 케이스) ---");
+  try {
+    await getData3({ a: "실패 테스트" }, { b: "실패 테스트2" }, true); // shouldReject를 true로 설정하여 실패 유도
+  } catch (error) {
+    console.error("getData3 (실패 케이스) 에러:", error.message);
+  }
+}
+
+showData3();
