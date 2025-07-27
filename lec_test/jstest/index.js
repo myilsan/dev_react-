@@ -39,6 +39,7 @@ getData(
  * 5. 5번 main 에서 수정
  * 6. 6번째 branch에서 수정
  * 7. 7번째 branch에서 수정
+ * 8. 8번째 branch에서 수정
  */
 
 function getData2(param1, param2) {
