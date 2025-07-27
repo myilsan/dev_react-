@@ -1,23 +1,64 @@
-function getdata(callback) {
-  setTimeout(function () {
-    const data = {
+function getData(callback, param1, param2) {
+  setTimeout(() => {
+    const data1 = {
       name: "최경호",
       sex: "남자",
-      adress: "경기도 고양시 일산서구",
-      message: () => alert("만나서 반갑습니다1."),
+      address: "경기도 고양시 일산서구",
+      message: () => alert(`이름 : ${data1.name} ${param1.a}`),
     };
     const data2 = {
       name: "박진영",
+      age: 28,
       sex: "여자",
-      adress: "경기도 고양시 일산서구",
-      message: () => alert("만나서 반갑습니다1."),
+      address: "경기도 고양시 일산서구",
+      message: () => alert(`이름 : ${data2.name} ${param2.b}`),
     };
-    callback(data, data2);
+    callback(data1, data2);
   }, 2000);
 }
 
-getdata((data, data2) => {
-  console.log(data.message());
-  console.log(data);
+getData(
+  (data1, data2) => {
+    data1.message();
+    data2.message();
+    console.log(data1);
+    console.log(data2);
+  },
+  { a: "파라미터" },
+  { b: "파라미터2" }
+);
+
+/*
+ * Promise를 사용한 예제
+ */
+
+function getData2(param1, param2) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const data1 = {
+        name: "최경호",
+        sex: "남자",
+        address: "경기도 고양시 일산서구",
+        message: () => alert(`이름 : 최경호 ${param1.a}`),
+      };
+      const data2 = {
+        name: "박진영",
+        age: 28,
+        sex: "여자",
+        address: "경기도 고양시 일산서구",
+        message: () => alert(`이름 : 박진영 ${param2.b}`),
+      };
+      resolve([data1, data2]);
+    }, 2000);
+  });
+}
+
+async function showData() {
+  const [data1, data2] = await getData2({ a: "파라미터" }, { b: "파라미터2" });
+  data1.message();
+  data2.message();
+  console.log(data1);
   console.log(data2);
-});
+}
+
+showData();
