@@ -36,7 +36,7 @@ getData(
  * 4. Promise 객체의 then() 메소드의 콜백 함수에서 Promise 객체의 resolve() 메소드의 인자로 전달한 값에 접근
  * 5. 수정 반영해주세요Promise 객체의 catch() 메소드를 호출하여 에러 처리
  * 4. Promise 객체의 then() 메소드의 콜백 함수에서 Propumise 객체의 resolve() 메소드의 인자로 전달한 값에 접근
- * 6. devalop에서 수정
+ * 6. devalop에서 수정후 확인
  */
 function getData2(param1, param2) {
   return new Promise((resolve) => {
