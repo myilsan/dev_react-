@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export function useInput(initValue)
 {
-    //Custm hooks 
+    //Custm hooks  
     const  [inputValue , setInputValue_] = useState(initValue);  
 
     const handleChange = (e)=>{
@@ -14,6 +14,6 @@ export function useInput(initValue)
     {
         setInputValue_(e);
     };
-  
+    //callback
     return [inputValue,setInputValue, handleChange,]
 }
