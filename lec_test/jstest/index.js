@@ -29,7 +29,7 @@ getData(
 );
 
 /*
- * Promise를 사용한 예제
+ * Promise를 사용한 예제(relase에서 수정)
  * 1. Promise 객체를 생성
  * 2. Promise 객체의 resolve() 메소드를 호출
  * 3. Promise 객체의 then() 메소드를 호출
