@@ -46,8 +46,8 @@ function getData2(param1, param2) {
       const data1 = {
         name: "최경호_01",
         sex: "남자",
-        address: "경기도 고양시 일산서구 원일로 105",
-        message: () => alert(`이름 : 최경호 ${param1.a}`),
+        address: "경기도 고양시 일산서구 원일로 21번길",
+        message: () => alert(`이름 : 최경호입니다. ${param1.a}`),
       };
       const data2 = {
         name: "박진영",
