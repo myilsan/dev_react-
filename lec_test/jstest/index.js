@@ -53,8 +53,8 @@ function getData2(param1, param2) {
         name: "박진영",
         age: 28,
         sex: "여자",
-        address: "경기도 고양시 일산서구",
-        message: () => alert(`이름 : 박진영 이군요!!!! ${param2.b}`),
+        address: "경기도 고양시 일산서구02",
+        message: () => alert(`이름 : 박진영 반가워요!!!!!!!!02 ${param2.b}`),
       };
       resolve([data1, data2]);
     }, 2000);
