@@ -44,7 +44,7 @@ function getData2(param1, param2) {
   return new Promise((resolve) => {
     setTimeout(() => {
       const data1 = {
-        name: "최경호",
+        name: "최경호_01",
         sex: "남자",
         address: "경기도 고양시 일산서구",
         message: () => alert(`이름 : 최경호 ${param1.a}`),
