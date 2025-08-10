@@ -76,7 +76,7 @@ function getData3(param1, param2, shouldReject = false) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (shouldReject) {
-        reject(new Error("데이터를 가져오는 데 실패했습니다.")); // 에러 시 reject 호출
+        reject(new Error("데이터를 가져오는 데 실패했습니다!.")); // 에러 시 reject 호출
         return;
       }
 
