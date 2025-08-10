@@ -3,7 +3,7 @@ function getData(callback, param1, param2) {
     const data1 = {
       name: "최경호",
       sex: "남자",
-      address: "경기도 고양시 일산서구",
+      address: "경기도 고양시 일산서구02",
       message: () => alert(`이름 : ${data1.name} ${param1.a}`),
     };
     const data2 = {
